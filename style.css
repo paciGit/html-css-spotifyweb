@@ -1,0 +1,70 @@
+/* REGOLE GENERALI */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container_flex {
+  display: flex;
+}
+
+/* HEADER */
+#upgrade {
+  width: calc(100% - 230px);
+  height: 60px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: #0b0b0beb;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#upgrade button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  border-radius: 20px;
+  padding: 10px 34px;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+#upgrade button:hover {
+  transform: scale(1.05);
+}
+
+/* SECTION LOGO, NAVBAR & PROFILE */
+#b_laterale {
+  position: fixed;
+  width: 230px;
+  height: calc(100% - 90px);
+  background: black;
+}
+
+/* MAIN */
+main {
+  height: 1200px;
+  display: flex;
+  background: #121212;
+}
+
+.corpototale {
+  width: calc(100% - 250px);
+  padding-top: 60px;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 90px;
+  background-color: #282828;
+}
