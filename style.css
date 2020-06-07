@@ -1,13 +1,33 @@
-/* REGOLE GENERALI */
+/* REGOLE GENERALI ---------------------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  color: white;
 }
 
 .container_flex {
   display: flex;
+}
+
+.button_general {
+  padding: 6px 0px;
+  align-items: center;
+  opacity: 0.7;
+  cursor: pointer;
+  padding-left: 27px;
+}
+
+.button_general .icona {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+
+.button_general:hover {
+  color: white;
+  opacity: 1;
 }
 
 /* HEADER */
@@ -39,15 +59,125 @@
   transform: scale(1.05);
 }
 
-/* SECTION LOGO, NAVBAR & PROFILE */
+/* SECTION B_LATERALE (LOGO, PLAYLIST & ACCOUNT) ------------------------------ */
 #b_laterale {
   position: fixed;
   width: 230px;
-  height: calc(100% - 90px);
+  height: calc(100% - 70px);
   background: black;
 }
 
-/* MAIN */
+#b_laterale .logo {
+  height: 40px;
+  margin: 20px 0 10px 0;
+  width: 80%;
+}
+
+.total_sx_bar {
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  align-content: space-between;
+}
+
+.first_column, .second_column {
+  width: 100%;
+}
+
+.first_column, .second_column {
+  flex-wrap: wrap;
+}
+
+/* MENU */
+.menu {
+  width: 100%;
+  margin: 10px 0px;
+}
+
+.menu .button_general:hover {
+  border-left: 2px yellow solid;
+}
+
+.menu h4 {
+  font-size: 14px;
+  color: white;
+}
+
+/* PLAYLIST */
+.playlist h3 {
+  padding-left: 25px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.playlist h4 {
+  margin: 0 0 7px 8px;
+}
+
+#crea {
+  width: auto;
+  height: auto;
+  background: lightgrey;
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.playlist_list {
+  overflow: scroll;
+  max-height: 20vh;
+}
+
+.playlist_list::-webkit-scrollbar {
+display: none;
+}
+
+/* ACCOUNT */
+.app_installer {
+  font-weight: normal;
+  font-size: 12px;
+  border-bottom: 0.5px solid lightgrey;
+  margin: 0px 25px;
+  padding: 10px 0px;
+  width: 100%;
+}
+
+#download {
+  width: auto;
+  height: 15px;
+  margin-right: 5px;
+  border-radius: 100%;
+  padding: none;
+}
+
+.icona_account {
+  background: grey;
+  border-radius: 100%;
+}
+
+.button_icon {
+  padding: 6px 0px;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px 25px;
+}
+
+.button_icon .icona {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.button_icon span {
+  font-weight: bold;
+}
+
+.button_icon:hover {
+  color: white;
+  opacity: 1;
+}
+
+/* MAIN --------------------------------------------------------- */
 main {
   height: 1200px;
   display: flex;
@@ -59,12 +189,148 @@ main {
   padding-top: 60px;
 }
 
-/* FOOTER */
+/* FOOTER ------------------------------------------------------- */
 footer {
   width: 100%;
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 90px;
+  height: 70px;
   background-color: #282828;
+  padding-top: 5px;
+}
+
+footer h5 {
+  font-weight: 500;
+}
+
+.col_foot {
+  align-items: center;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+/* LEFT FOOTER*/
+
+#features_brano {
+  align-self: center;
+}
+
+.left img {
+  max-width: 60px;
+  max-height: 60px;
+  padding-left: 20px;
+}
+
+.left p {
+  opacity: 0.7;
+  font-size: 10px;
+}
+
+.left .far {
+  opacity: 0.7;
+  width: 100%;
+  color: white;
+  padding-right: 10px;
+}
+
+.left .far:hover {
+  opacity: 1;
+}
+
+.icone {
+  margin-left: 20px;
+}
+
+.left * {
+  padding: 0px 3px;
+}
+
+
+/* CENTER FOOTER */
+
+.center {
+  flex-grow: 2;
+  justify-content: center;
+}
+
+.riga_comandi, .contatore {
+  justify-content: center;
+}
+
+.riga_comandi .fas {
+  padding: 7px 13px;
+  opacity: 0.7;
+  margin-top: 5px;
+}
+
+.riga_comandi .fas:hover {
+  opacity: 1;
+}
+
+.riga_comandi .fa-play {
+  border: 2px solid white;
+  border-radius: 100%;
+  padding: 5px;
+  padding-left: 8px;
+}
+
+.fa-play:hover {
+  transform: scale(1.05);
+}
+
+.contatore {
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.progressbar {
+  background-color: grey;
+  border: solid 1px grey;
+  border-radius: 500px;
+  height:5px;
+  box-sizing: border-box;
+  margin: 10px 15px;
+  opacity: 0.8;
+}
+
+.center .progressbar {
+  flex-basis: 60%
+}
+
+.center .progress_bar {
+  background: lightgrey;
+  border-radius: 500px;
+  width: 20%;
+  height: 100%
+}
+
+/* RIGHT FOOTER */
+
+.right {
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.right .fas {
+  flex-basis: 8%;
+  text-align: right;
+  padding: 0px 8px;
+  opacity: 0.7;
+}
+
+.right .fas:hover {
+  opacity: 1;
+}
+
+.right .progressbar {
+  flex-basis: 150px;
+  margin: 10px;
+}
+
+.right .progress_bar {
+  background: lightgrey;
+  border-radius: 500px;
+  width: 20%;
+  height: 100%
 }

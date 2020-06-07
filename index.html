@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <title>SpotifyWeb</title>
   </head>
@@ -15,8 +16,77 @@
       </div>
     </header>
 
+    <!-- SEZIONE LATERALE -->
     <section id="b_laterale" class="container_flex">
 
+      <div class="total_sx_bar container_flex">
+
+        <!-- FIRST COLUMN -->
+        <div class="first_column container_flex">
+          <!-- LOGO -->
+          <img class="logo" src="img/logo.svg" alt="Logo">
+          <!-- MENU -->
+          <div class="menu">
+            <div class="button_general container_flex">
+              <img class="icona" src="img/home.svg" alt="Home">
+              <h4>Home</h4>
+            </div>
+            <div class="button_general container_flex">
+              <img class="icona" src="img/search.svg" alt="Search">
+              <h4>Cerca</h4>
+            </div>
+            <div class="button_general container_flex">
+              <img class="icona" src="img/libreria.svg" alt="Libreria">
+              <h4>La tua libreria</h4>
+            </div>
+          </div>
+
+          <!-- PLAYLIST -->
+          <div class="playlist">
+            <h3>PLAYLIST</h4>
+            <div class="button_general container_flex">
+              <img id="crea" src="img/more.png" alt="Crea Playlist">
+              <h4>Crea Playlist</h4>
+            </div>
+            <div class="playlist_list">
+              <div class="button_general container_flex">
+                <h5>Nome Playlist</h5>
+              </div>
+              <div class="button_general container_flex">
+                <h5>Nome Playlist</h5>
+              </div>
+              <div class="button_general container_flex">
+                <h5>Nome Playlist</h5>
+              </div>
+              <div class="button_general container_flex">
+                <h5>Nome Playlist</h5>
+              </div>
+              <div class="button_general container_flex">
+                <h5>Nome Playlist</h5>
+              </div>
+              <div class="button_general container_flex">
+                <h5>Nome Playlist</h5>
+              </div>
+              <div class="button_general container_flex">
+                <h5>Nome Playlist</h5>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="second_column container_flex">
+          <div class="account">
+            <div class="app_installer button_general container_flex">
+              <img id="download" src="img/download.svg" alt="Download">
+              <span>Installa app</span>
+            </div>
+            <div class="button_icon container_flex">
+              <img class="icona icona_account" src="img/profile.svg" alt="Profilo">
+              <span>John Doe</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <main>
@@ -27,6 +97,51 @@
     </main>
 
     <footer class="container_flex">
+
+      <!-- LEFT FOOTER -->
+      <div class="left col_foot container_flex">
+        <img src="img/sinister.jpeg" alt="Sinister">
+        <div id="features_brano">
+          <h5>Sinister</h5>
+          <p>Brano Nome</p>
+        </div>
+        <div class="icone container_flex">
+          <i class="far fa-heart"></i>
+          <i class="far fa-folder"></i>
+        </div>
+      </div>
+
+      <!-- CENTER FOOTER -->
+      <div class="center col_foot">
+          <div class="riga_comandi container_flex">
+            <i class="fas fa-random"></i>
+            <i class="fas fa-step-backward"></i>
+            <i class="fas fa-play"></i>
+            <i class="fas fa-step-forward"></i>
+            <i class="fas fa-redo-alt"></i>
+          </div>
+          <div class="contatore container_flex">
+            <div class="">
+              <h6>0:25</h6>
+            </div>
+            <div class="progressbar">
+              <div class="progress_bar"></div>
+            </div>
+            <div class="">
+              <h6>4:35</h6>
+            </div>
+          </div>
+      </div>
+
+      <!-- RIGHT FOOTER -->
+      <div class="right col_foot container_flex">
+        <i class="fas fa-list-ul"></i>
+        <i class="fas fa-tv"></i>
+        <i class="fas fa-volume-up"></i>
+        <div class="progressbar">
+          <div class="progress_bar"></div>
+        </div>
+      </div>
 
     </footer>
 
