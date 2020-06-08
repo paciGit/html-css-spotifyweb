@@ -17,6 +17,7 @@
   opacity: 0.7;
   cursor: pointer;
   padding-left: 27px;
+
 }
 
 .button_general .icona {
@@ -57,6 +58,15 @@
 
 #upgrade button:hover {
   transform: scale(1.05);
+}
+
+
+/* MOBILE */
+@media screen and (max-width: 575px) {
+  #upgrade {
+    width: calc(100% - 50px);
+  }
+
 }
 
 /* SECTION B_LATERALE (LOGO, PLAYLIST & ACCOUNT) ------------------------------ */
@@ -177,16 +187,206 @@ display: none;
   opacity: 1;
 }
 
+/* SECTION B_LATERALE (LOGO, PLAYLIST & ACCOUNT) XS ------------------------------ */
+.column_xs {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.button_general_xs .icona {
+  padding: 4px 0;
+  width: 24px;
+  height: 24px;
+}
+
+.logo-xs {
+  margin: 5px 0;
+}
+
+.button_general_xs {
+    justify-content: center;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.button_general_xs .icona_account_xs {
+  padding: 0px;
+  margin: 20px 0px 10px 0px;
+}
+
+#down_xs {
+  width: 10px;
+  height: 10px;
+  margin-right:0px;
+  padding: 2px;
+  border-radius: 100%;
+  border: 1px solid white;
+}
+
+/* MAXI DESKTOP */
+@media screen and (min-width: 1200px){
+  .column_xs {
+  display: none;
+}
+
+}
+
+/* DESKTOP */
+@media screen and (min-width: 992px) and (max-width: 1199px ) {
+  .column_xs {
+    display: none;
+  }
+
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .column_xs {
+    display: none;
+  }
+
+}
+
+/* LARGE-MOBILE */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .column_xs {
+    display: none;
+  }
+  
+}
+
+/* MOBILE */
+@media screen and (max-width: 575px) {
+  .total_sx_bar {
+    display: none;
+  }
+
+  #b_laterale {
+    width: 50px;
+  }
+
+}
+
+
 /* MAIN --------------------------------------------------------- */
 main {
   height: 1200px;
   display: flex;
   background: #121212;
+  justify-content: flex-end;
 }
 
 .corpototale {
   width: calc(100% - 250px);
   padding-top: 60px;
+}
+
+/* LISTA GENERI */
+#generi ul {
+  list-style-type: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+#generi a {
+ padding: 25px 25px 5px 25px;
+ opacity: 0.7;
+ cursor: pointer;
+ text-decoration: none;
+ color: white;
+}
+
+#generi li {
+  flex-direction: column;
+  align-items: center;
+}
+
+#generi hr {
+  width: 50%;
+  border: 1px solid yellow;
+  display: none;
+}
+
+#generi a:hover hr {
+  display: block;
+}
+
+#generi a:focus hr {
+  display: block;
+}
+
+/* LISTA RIPRODUZIONE */
+.songs {
+  flex-wrap: wrap;
+}
+
+.cover_song {
+  margin-right: 15px;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 155px;
+}
+
+.songs {
+  margin: 25px 0;
+}
+
+.played h3 {
+  margin: 10px 0;
+}
+
+.cover_img {
+  position: relative;
+}
+
+.layover_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.cover_song .fa-play {
+  border: 2px solid white;
+  border-radius: 100%;
+  padding: 5px;
+  padding-left: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+  margin: 0;
+}
+
+.cover_img:hover .layover_img {
+  display: block;
+}
+
+.cover_img:hover .fa-play {
+  display: block;
+}
+
+.cover_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.cover_song h5 {
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.cover_song p, .played p {
+  font-size: 12px;
+  opacity: 0.7;
+  font-weight: bold;
 }
 
 /* FOOTER ------------------------------------------------------- */
@@ -211,9 +411,12 @@ footer h5 {
 }
 
 /* LEFT FOOTER*/
+.left {
+  flex-basis: 25%;
+}
 
 #features_brano {
-  align-self: center;
+  align-items: center;
 }
 
 .left img {
@@ -250,8 +453,8 @@ footer h5 {
 /* CENTER FOOTER */
 
 .center {
-  flex-grow: 2;
   justify-content: center;
+  flex-basis: 40%;
 }
 
 .riga_comandi, .contatore {
@@ -259,9 +462,10 @@ footer h5 {
 }
 
 .riga_comandi .fas {
-  padding: 7px 13px;
+  padding: 7px 15px;
   opacity: 0.7;
   margin-top: 5px;
+  font-size: 15px;
 }
 
 .riga_comandi .fas:hover {
@@ -282,6 +486,7 @@ footer h5 {
 .contatore {
   flex-wrap: nowrap;
   align-items: center;
+  margin-top: 7px;
 }
 
 .progressbar {
@@ -308,8 +513,8 @@ footer h5 {
 /* RIGHT FOOTER */
 
 .right {
-  flex-wrap: nowrap;
   justify-content: flex-end;
+  flex-basis: 25%;
 }
 
 .right .fas {
@@ -333,4 +538,23 @@ footer h5 {
   border-radius: 500px;
   width: 20%;
   height: 100%
+}
+
+/* MOBILE  */
+@media screen and (max-width: 575px) {
+
+  .col_foot {
+    transform: scale(0.9, 0.9);
+  }
+
+  .left img {
+    max-width: 40px;
+    padding-left: 10px;
+  }
+
+  .riga_comandi .fas {
+    padding: 5px 5px;
+    opacity: 0.7;
+  }
+
 }
