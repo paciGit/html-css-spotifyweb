@@ -140,7 +140,7 @@
 }
 
 .playlist_list::-webkit-scrollbar {
-display: none;
+  display: none;
 }
 
 /* ACCOUNT */
@@ -276,7 +276,7 @@ main {
 
 .corpototale {
   width: calc(100% - 250px);
-  height: auto;
+  height: calc(100% - 100px);
   padding-top: 60px;
 }
 
@@ -401,6 +401,10 @@ main {
   border-radius: 100%;
 }
 
+.artist_cover .layover_img {
+  border-radius: 100%;
+}
+
 /* FOOTER ------------------------------------------------------- */
 footer {
   width: 100%;
@@ -495,7 +499,7 @@ footer h5 {
   padding-left: 8px;
 }
 
-.fa-play:hover {
+.riga_comandi .fa-play:hover {
   transform: scale(1.05);
 }
 
