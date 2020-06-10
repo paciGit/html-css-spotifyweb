@@ -38,7 +38,8 @@
   position: fixed;
   top: 0;
   right: 0;
-  background: #0b0b0beb;
+  background: #101117;
+  opacity: 0.7;
   justify-content: flex-end;
   align-items: center;
   z-index: 999;
@@ -137,6 +138,9 @@
 .playlist_list {
   overflow: scroll;
   max-height: 20vh;
+}
+
+.playlist_list {
 }
 
 .playlist_list::-webkit-scrollbar {
@@ -268,10 +272,11 @@
 
 /* MAIN --------------------------------------------------------- */
 main {
-  height: auto;
+  height: 100%;
+  padding-bottom: 70px;
   display: flex;
   justify-content: flex-end;
-  background: #121212;
+  background: #191b21;
 }
 
 .corpototale {
@@ -290,11 +295,11 @@ main {
 }
 
 #generi a {
- padding: 25px 25px 5px 25px;
- opacity: 0.7;
- cursor: pointer;
- text-decoration: none;
- color: white;
+  padding: 25px 25px 5px 25px;
+  opacity: 0.7;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
 
 #generi li {
@@ -512,8 +517,8 @@ footer h5 {
 .progressbar {
   background-color: grey;
   border: solid 1px grey;
-  border-radius: 500px;
-  height:5px;
+  border-radius: 20px;
+  height: 5px;
   box-sizing: border-box;
   margin: 10px 15px;
   opacity: 0.8;
@@ -525,7 +530,7 @@ footer h5 {
 
 .center .progress_bar {
   background: lightgrey;
-  border-radius: 500px;
+  border-radius: 20px;
   width: 20%;
   height: 100%
 }
