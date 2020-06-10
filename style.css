@@ -7,6 +7,10 @@
   color: white;
 }
 
+body {
+  background: #191b21;
+}
+
 .container_flex {
   display: flex;
 }
@@ -106,7 +110,7 @@
   margin: 10px 0px;
 }
 
-.menu .button_general:hover {
+.menu .button_general:focus {
   border-left: 2px yellow solid;
 }
 
@@ -140,9 +144,6 @@
   max-height: 20vh;
 }
 
-.playlist_list {
-}
-
 .playlist_list::-webkit-scrollbar {
   display: none;
 }
@@ -159,7 +160,7 @@
 
 #download {
   width: auto;
-  height: 15px;
+  height: 20px;
   margin-right: 5px;
   border-radius: 100%;
   padding: none;
@@ -215,15 +216,23 @@
   cursor: pointer;
 }
 
+.button_general_xs .icona {
+  width: 30px;
+  height: 30px;
+}
+
 .button_general_xs .icona_account_xs {
   padding: 0px;
   margin: 20px 0px 10px 0px;
+  width: 32px;
+  height: 32px;
 }
 
 #down_xs {
   width: auto;
-  height: 18px;
+  height: 28px;
   border-radius: 100%;
+  padding-right: 4px;
 }
 
 /* MAXI DESKTOP */
@@ -276,13 +285,18 @@ main {
   padding-bottom: 70px;
   display: flex;
   justify-content: flex-end;
-  background: #191b21;
 }
 
 .corpototale {
   width: calc(100% - 250px);
   height: calc(100% - 100px);
   padding-top: 60px;
+  position: fixed;
+  overflow: scroll;
+}
+
+.corpototale::-webkit-scrollbar {
+  display: none;
 }
 
 /* LISTA GENERI */
@@ -313,10 +327,6 @@ main {
   display: none;
 }
 
-#generi a:hover hr {
-  display: block;
-}
-
 #generi a:focus hr {
   display: block;
 }
@@ -337,8 +347,8 @@ main {
 
 .cover_song {
   margin-right: 15px;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  text-align: center;
   flex-basis: 155px;
 }
 
@@ -368,14 +378,15 @@ main {
 .cover_song .fa-play {
   border: 2px solid white;
   border-radius: 100%;
-  padding: 5px;
-  padding-left: 8px;
+  padding: 8px;
+  padding-left: 12px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   display: none;
   margin: 0;
+  font-size: 30px;
 }
 
 .cover_img:hover .layover_img {
