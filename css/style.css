@@ -289,7 +289,7 @@ main {
 
 .corpototale {
   width: calc(100% - 250px);
-  height: calc(100% - 100px);
+  height: calc(100% - 70px);
   padding-top: 60px;
   position: fixed;
   overflow: scroll;

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <title>SpotifyWeb</title>
@@ -82,7 +82,7 @@
             </div>
             <div class="button_icon container_flex">
               <img class="icona icona_account" src="img/profile.svg" alt="Profilo">
-              <span>John Doe</span>
+              <span id="account_js"></span>
             </div>
           </div>
         </div>
@@ -199,9 +199,9 @@
           </div>
         </div>
 
-        <!-- LISTA JOHN DOE -->
+        <!-- LISTA PERSONALIZZATA -->
         <div class="general_row">
-          <h3>Creato per John Doe</h4>
+          <h3 id="sec_account_js"></h4>
           <p>Più ascolti, più accurati saranno i suggerimenti.</p>
           <div class="songs container_flex">
             <div class="cover_song container_flex">
@@ -301,6 +301,8 @@
       </div>
 
     </footer>
+
+    <script type="text/javascript" src="js/script.js"></script>
 
   </body>
 </html>
